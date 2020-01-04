@@ -1,0 +1,348 @@
+body{
+    background-color: lightcoral; 
+    height: 100%;
+}
+
+/*SECTION HEADER START*/
+.header-welcomes {
+    font-family: "Roboto", sans-serif;
+    color: blue;
+    font-size: 200%;
+    text-align: center;
+    text-shadow: 2px 2px 5px red;
+    margin: 20px auto;
+}
+
+.header-medical {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    align-items: center;
+    background-color:wheat;
+    border: 3px solid green;
+    padding: 10px 20px;
+    margin: 5px auto;
+}
+
+.header-medical_logo{
+    width: 135px;
+    height: 105px;
+}
+
+.header-medical_logo img{
+    width: 100%;
+    height: 100%;
+}
+
+.header-medical_aim{
+    font-family: "Roboto", sans-serif;
+    font-size: 25px;
+    text-shadow: 2px 2px 4px white;
+}
+
+.header-button{
+  background-color: green;
+  border: none;
+  color:oldlace;
+  padding: 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  outline: none;
+  font-size: 20px;
+  margin: 4px 2px;
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.header-button:hover {
+    background-color:#4CAF50;
+}
+
+.header-button:active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+/*SECTION HEADER END*/
+
+/*SECTION MAIN START*/
+
+.appointment-deck {
+    width: 85%;
+    box-sizing:border-box;
+    margin: 20px auto;
+}
+
+#board{
+    height:500px;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:flex-start;
+    align-items:flex-start;
+    position:relative;
+    background-color:wheat;
+    border:3px solid green;
+    border-radius:8px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.board-text{
+    font-family: "Roboto", sans-serif;
+    font-size: 25px;
+    text-shadow: 2px 2px 4px white;
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+}
+
+/*SECTION MAIN END*/
+
+/*SECTION MODAL START*/
+
+.overlay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color:rgba(74,63,77,.7);
+    transition: .4s;
+    z-index: 999;
+}
+.overlay-hidden {
+    display: none;
+}
+
+.modal {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    min-height: 300px;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+    background-color:wheat;
+    border: 2px solid green;
+    border-radius: 10px;
+    padding: 15px;
+    z-index: 99999;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.cross {
+    color: green;
+    font-size: 30px;
+    cursor: pointer;
+    transition: .4s;
+}
+
+.cross:hover{
+    transform:rotate(90deg);
+}
+
+.select {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 30px;
+    width: 300px;
+    color:#fff;
+    background-color: green;
+    font-size: 16px;
+    text-align: left;
+    padding: 0 20px;
+    border-radius: 5px;
+    border: none;
+    box-sizing: border-box;
+    cursor: pointer;
+    outline-style: none;
+}
+
+.select:after{
+    content:'';
+    display:block;
+    width:0;
+    height:0;
+    border-style: solid;
+    border-width: 7px 7px 0;
+    border-color: #fff transparent transparent;
+}
+
+.select-doctor{
+    display: none;
+    flex-direction: column;
+    width: 300px;
+    overflow: hidden;
+    cursor: pointer;
+    border: 1px solid brown;
+    border-radius: 5px;
+    position: absolute;
+    transition: .4s;
+    -webkit-transition:.4s;
+    -webkit-transform:translateY(40px);
+    -ms-transform:translateY(40px);
+    transform: translateY(40px);
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+}
+
+.specialist{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    color: brown;
+    background-color: lightgreen;
+    padding: 10px;
+    border: 1px solid brown;
+    transition:.4s;
+}
+
+.doctor:hover{
+    padding-left: 20px;
+    color:darkgreen;
+    background-color:#fff;
+    border-bottom: 1px solid red;
+    text-shadow: 0 0 3px orange;
+}
+
+.modal-form{
+    display: flex;
+    flex-direction:column;
+}
+
+.info-input-descript {
+    margin: 10px 0 5px;
+    font-size: 15px;
+}
+
+.info-input {
+    font-size: 14px;
+    border: 1px solid brown;
+    border-radius: 5px;
+    padding: 5px;
+    font-family: "Roboto", sans-serif;
+}
+
+.info-input-comment {
+    font-size: 14px;
+    border: 1px solid brown;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.submit-btn {
+    margin: 10px auto 0;
+    display: block;
+    padding: 10px 35px;
+    background-color:green;
+    border-radius: 9999px;
+    color:#fff;
+    font-size: 16px;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-color: 1px solid brown;
+}
+
+.submit-btn:hover {
+    color: green;
+    background-color:#fff;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.form-hidden {
+    display: none;
+}
+
+.doctors-list_opened {
+    display:flex;
+    display:-webkit-box;
+}
+
+.form-shown {
+    display: flex;
+}
+
+.card {
+    display: flex;
+    display:-webkit-box;
+    -webkit-box-orient:vertical;
+    -webkit-box-direction:normal;
+    flex-direction: column;
+    width: 220px;
+    padding: 15px;
+    margin: 15px;
+    font-family: "Roboto", sans-serif;
+    position: relative;
+    -webkit-transform:rotate(.5deg);
+    -ms-transform:rotate(.5deg);
+    border-color: 2px solid brown;
+    box-shadow: 5px 5px 10px -2px rgba(33,33,33,.3);
+    transform: rotate(.5deg);
+}
+
+.card-content {
+    margin-bottom: 10px;
+    font-size: 14px;
+    color:#000!important;
+}
+
+.card-content-hidden {
+    display: none;
+}
+
+.show-more{
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    font-size: 14px;
+    font-family: Roboto,sans-serif;
+    color: white;
+    background-color: green;
+    border-radius: 35px;
+    cursor: pointer;
+}
+
+.delete-card {
+    position: absolute;
+    right: 10px;
+    top: -5px;
+    width: 13px;
+    height: 13px;
+    background: radial-gradient(lightgreen,6%,darkgreen);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: .4s;
+}
+
+.delete-card:hover {
+    top:-9px;
+}
+
+.delete-card:hover:after {
+    height:29px;
+}
+
+.delete-card:after {
+    content:'';
+    display:block;
+    height:25px;
+    width:2px;
+    background:linear-gradient(white 5%,grey);
+    position:absolute;
+    z-index:-1;
+    left:30%;
+    transform: translateX(-50%);
+    transform: rotateZ(10deg);
+    transition:.4s;
+}
